@@ -1,5 +1,6 @@
 package initialization_and_cleanup.ex13;
 
+
 @SuppressWarnings("")
 public class Cup {
     Cup(int marker) {
@@ -12,11 +13,13 @@ public class Cup {
 
     public static void main(String[] args) {
         System.out.println("Inside main()");
-        Cups.cup.f(99); // (1)     
+        Cups.cup.f(99); // (1)
     }
+
     static Cups cups = new Cups(); // (2)
 }
- 
+
+
 class Cups {
     static Cup cup;
     static {

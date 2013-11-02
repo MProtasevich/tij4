@@ -1,5 +1,6 @@
 package everithing_is_an_object.ex15;
 
+
 // Exercise 2: (1) Following the HelloDate.java example in this chapter,
 // create a “hello, world” program that simply displays that statement.
 // You need only a single method in your class (the “main” one that gets
@@ -8,15 +9,13 @@ package everithing_is_an_object.ex15;
 // Compile the program with javac and run it using java. If you are using a
 // different development environment than the JDK, learn how to compile and
 // run programs in that environment. 
-/** 
-* Public class contained in file of the same name that includes main()
-*/
-
+/**
+ * Public class contained in file of the same name that includes main()
+ */
 public class Exercise2 {
-
     /**
-    * main method executed by java
-    */ 
+     * main method executed by java
+     */
     public static void main(String[] args) {
         System.out.println("Hello world!");
     }

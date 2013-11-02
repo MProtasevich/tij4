@@ -1,20 +1,19 @@
 package everithing_is_an_object.ex16;
+
+
 // object/Overloading.java
 // TIJ4 Chapter Object, Exercise 16, page 91
 /* In the Initialization and Cleanup chapter, locate the Overloading.java
-* example and add Javadoc documentation. Extract this comment documentation
-* into and HTML file using Javadoc and view it with your Web browser.
-*/
-
+ * example and add Javadoc documentation. Extract this comment documentation
+ * into and HTML file using Javadoc and view it with your Web browser.
+ */
 // initialization/Overloading.java
 // Demonstration of both constructor
 // and ordinary method overloading.
-
 /**
  * creates type Tree wth two constructors and one info method
  */
 class Tree {
-
     int height;
 
     /**
@@ -30,10 +29,10 @@ class Tree {
      */
     Tree(int initialHeight) {
         height = initialHeight;
-        System.out.println("Creating new tree that is " + height + 
-                           " feet tall");
+        System.out
+                .println("Creating new tree that is " + height + " feet tall");
     }
- 
+
     /**
      * method to print height of tree object
      */
@@ -48,6 +47,7 @@ class Tree {
         System.out.println(s + ": Tree is " + height + " feet tall");
     }
 }
+
 
 /**
  * class to test construction of tree objects
