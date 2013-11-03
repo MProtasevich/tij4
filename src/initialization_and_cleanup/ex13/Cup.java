@@ -1,7 +1,6 @@
 package initialization_and_cleanup.ex13;
 
 
-@SuppressWarnings("")
 public class Cup {
     Cup(int marker) {
         System.out.println("Cup(" + marker + ")");

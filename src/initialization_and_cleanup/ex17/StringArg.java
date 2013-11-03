@@ -9,6 +9,7 @@ public class StringArg {
     }
 
     public static void main(String[] args) {
+        @SuppressWarnings("unused")
         StringArg[] array = new StringArg[OBJECTS_TO_CREATE];
     }
 }
