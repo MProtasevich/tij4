@@ -1,6 +1,7 @@
 package reusing_classes.ex20;
 
 
+@SuppressWarnings("unused")
 class WithFinals {
     private final void f() {
         System.out.println("WithFinals.f()");
@@ -12,6 +13,7 @@ class WithFinals {
 }
 
 
+@SuppressWarnings("unused")
 class OverridingPrivate extends WithFinals {
     // @Override // can't be placed here, because
     // WithFinals.f() declared as private (current class can't see this

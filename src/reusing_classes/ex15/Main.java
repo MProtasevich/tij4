@@ -14,7 +14,7 @@ class ProtectedEx extends Protected {
 
 public class Main {
     public static void main(String[] args) {
-        Protected protected1 = new Protected();
+        /*Protected protected1 = */new Protected();
         // protected1.f(); // Can't call this method because it's protected
         ProtectedEx protectedEx = new ProtectedEx();
         protectedEx.g();

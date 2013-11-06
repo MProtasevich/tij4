@@ -2,6 +2,7 @@ package polymorphism.ex12;
 
 
 class Mouse extends Rodent {
+    @SuppressWarnings("unused")
     private String description = "Mouse";
 
     Mouse() {
@@ -21,7 +22,9 @@ class Mouse extends Rodent {
 
 
 class Gerbil extends Rodent {
+    @SuppressWarnings("unused")
     private String description = "Gerbil";
+
     Gerbil() {
         System.out.println("Gerbil()");
     }
@@ -39,6 +42,7 @@ class Gerbil extends Rodent {
 
 
 class Hamster extends Rodent {
+    @SuppressWarnings("unused")
     private String description = "Hamster";
 
     public Hamster() {
@@ -58,6 +62,7 @@ class Hamster extends Rodent {
 
 
 public class Rodent {
+    @SuppressWarnings("unused")
     private String description = "Rodent";
 
     public Rodent() {

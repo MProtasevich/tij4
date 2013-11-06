@@ -1,8 +1,8 @@
 package polymorphism.ex14;
 
 
-@SuppressWarnings("")
 class Mouse extends Rodent {
+    @SuppressWarnings("unused")
     private String description = "Mouse";
 
     Mouse(Shared shared) {
@@ -23,7 +23,9 @@ class Mouse extends Rodent {
 
 
 class Gerbil extends Rodent {
+    @SuppressWarnings("unused")
     private String description = "Gerbil";
+
     Gerbil(Shared shared) {
         super(shared);
         System.out.println("Gerbil()");
@@ -42,6 +44,7 @@ class Gerbil extends Rodent {
 
 
 class Hamster extends Rodent {
+    @SuppressWarnings("unused")
     private String description = "Hamster";
 
     public Hamster(Shared shared) {
@@ -65,6 +68,8 @@ public class Rodent {
     private Shared shared;
     private static int counter = 0;
     private final int id = counter++;
+
+    @SuppressWarnings("unused")
     private String description = "Rodent";
 
     public Rodent(Shared shared) {
