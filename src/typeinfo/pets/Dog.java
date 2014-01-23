@@ -10,4 +10,9 @@ public class Dog extends Pet {
     public Dog() {
         super();
     }
-} // /:~
+
+    @Override
+    public void speak() {
+        System.out.println("Bark");
+    }
+}

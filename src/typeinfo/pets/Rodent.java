@@ -2,7 +2,7 @@
 package typeinfo.pets;
 
 
-public class Rodent extends Pet {
+public abstract class Rodent extends Pet {
     public Rodent(String name) {
         super(name);
     }
@@ -10,4 +10,4 @@ public class Rodent extends Pet {
     public Rodent() {
         super();
     }
-} // /:~
+}

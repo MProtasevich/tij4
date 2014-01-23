@@ -10,4 +10,9 @@ public class Hamster extends Rodent {
     public Hamster() {
         super();
     }
-} // /:~
+
+    @Override
+    public void speak() {
+        System.out.println("Ksi");
+    }
+}

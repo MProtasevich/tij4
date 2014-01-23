@@ -10,4 +10,9 @@ public class Mouse extends Rodent {
     public Mouse() {
         super();
     }
-} // /:~
+
+    @Override
+    public void speak() {
+        System.out.println("Ksi-ksi");
+    }
+}

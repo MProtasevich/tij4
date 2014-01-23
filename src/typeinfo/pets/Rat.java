@@ -10,4 +10,9 @@ public class Rat extends Rodent {
     public Rat() {
         super();
     }
-} // /:~
+
+    @Override
+    public void speak() {
+        System.out.println("Phi-phi");
+    }
+}

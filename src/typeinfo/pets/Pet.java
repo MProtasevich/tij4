@@ -10,4 +10,7 @@ public class Pet extends Individual {
     public Pet() {
         super();
     }
+
+    public void speak() {
+    }
 }

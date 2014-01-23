@@ -10,4 +10,9 @@ public class Cat extends Pet {
     public Cat() {
         super();
     }
-} // /:~
+
+    @Override
+    public void speak() {
+        System.out.println("Meow");
+    }
+}

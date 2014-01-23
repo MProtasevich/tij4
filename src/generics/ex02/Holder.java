@@ -7,10 +7,25 @@ public class Holder<T> {
     public Holder(T... a) {
         if(a.length == NUM_OF_OBJECTS) {
             objects = a;
-        } else {
+        } else if(a.length > NUM_OF_OBJECTS) {
             objects = new Object[NUM_OF_OBJECTS];
             for(int i = 0; i < NUM_OF_OBJECTS; ++i) {
                 objects[i] = a[i];
+            }
+        } else if(a.length < NUM_OF_OBJECTS) {
+            objects = new Object[NUM_OF_OBJECTS];
+            for(int i = 0; i < a.length; ++i) {
+                objects[i] = a[i];
+            }
+
+            for(int i = a.length; i < NUM_OF_OBJECTS; ++i) {
+                try {
+                    objects[i] = a.getClass().newInstance();
+                } catch(InstantiationException e) {
+                    e.printStackTrace();
+                } catch(IllegalAccessException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
