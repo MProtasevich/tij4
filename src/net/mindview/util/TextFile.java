@@ -52,8 +52,9 @@ public class TextFile extends ArrayList<String> {
         super(Arrays.asList(read(fileName).split(splitter)));
         // Regular expression split() often leaves an empty
         // String at the first position:
-        if(get(0).equals(""))
+        if(get(0).equals("")) {
             remove(0);
+        }
     }
 
     // Normally read by lines:
@@ -88,9 +89,4 @@ public class TextFile extends ArrayList<String> {
         // Display the capitalized words:
         System.out.println(words.headSet("a"));
     }
-} /*
-   * Output: [0, ArrayList, Arrays, Break, BufferedReader, BufferedWriter,
-   * Clean, Display, File, FileReader, FileWriter, IOException, Normally,
-   * Output, PrintWriter, Read, Regular, RuntimeException, Simple, Static,
-   * String, StringBuilder, System, TextFile, Tools, TreeSet, W, Write]
-   */// :~
+}
