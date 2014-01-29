@@ -1,11 +1,11 @@
-package containers.ex20;
+package containers.ex37;
 
 
 //: containers/SimpleHashMap.java
 // A demonstration hashed Map.
 import java.util.AbstractMap;
+import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Map;
 import java.util.Set;
@@ -20,7 +20,7 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
     // You can't have a physical array of generics,
     // but you can upcast to one:
     @SuppressWarnings("unchecked")
-    LinkedList<MapEntry<K, V>>[] buckets = new LinkedList[SIZE];
+    ArrayList<MapEntry<K, V>>[] buckets = new ArrayList[SIZE];
 
     @Override
     public V put(K key, V value) {
@@ -28,10 +28,10 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
         int index = Math.abs(key.hashCode()) % SIZE;
 
         if(buckets[index] == null) {
-            buckets[index] = new LinkedList<MapEntry<K, V>>();
+            buckets[index] = new ArrayList<MapEntry<K, V>>();
         }
 
-        LinkedList<MapEntry<K, V>> bucket = buckets[index];
+        ArrayList<MapEntry<K, V>> bucket = buckets[index];
         MapEntry<K, V> pair = new MapEntry<K, V>(key, value);
         boolean found = false;
         ListIterator<MapEntry<K, V>> it = bucket.listIterator();
@@ -74,7 +74,7 @@ public class SimpleHashMap<K, V> extends AbstractMap<K, V> {
     @Override
     public Set<Map.Entry<K, V>> entrySet() {
         Set<Map.Entry<K, V>> set = new HashSet<Map.Entry<K, V>>();
-        for(LinkedList<MapEntry<K, V>> bucket : buckets) {
+        for(ArrayList<MapEntry<K, V>> bucket : buckets) {
             if(bucket == null) {
                 continue;
             }
