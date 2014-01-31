@@ -1,0 +1,51 @@
+1: package io.ex14;
+2: 
+3: import io.BufferedInputFile;
+4: 
+5: import java.io.BufferedReader;
+6: import java.io.BufferedWriter;
+7: import java.io.FileWriter;
+8: import java.io.IOException;
+9: import java.io.PrintWriter;
+10: import java.io.StringReader;
+11: 
+12: 
+13: public class Ex14 {
+14:     static String inFile = "src/io/ex14/Ex14.java",
+15:                    outFile = inFile + ".out",
+16:                    outFile2 = inFile + ".2.out";
+17: 
+18:     public static void main(String[] args) throws IOException {
+19:         BufferedReader in = new BufferedReader(new StringReader(
+20:                 BufferedInputFile.read(inFile)));
+21:         // Buffered writer:
+22:         PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(
+23:                 outFile)));
+24:         int lineCount = 1;
+25:         String s;
+26:         long start = System.nanoTime();
+27: 
+28:         while((s = in.readLine()) != null) {
+29:             out.println(lineCount++ + ": " + s);
+30:         }
+31: 
+32:         long duration = System.nanoTime() - start;
+33:         out.close();
+34:         System.out.println("Buffered write:   " + duration + " nanoseconds");
+35:         BufferedReader in2 = new BufferedReader(new StringReader(
+36:                 BufferedInputFile.read(inFile)));
+37:         // Unbuffered writer:
+38:         PrintWriter out2 = new PrintWriter(new FileWriter(outFile2));
+39:         int lineCount2 = 1;
+40:         String s2;
+41:         long start2 = System.nanoTime();
+42: 
+43:         while((s2 = in2.readLine()) != null) {
+44:             out2.println(lineCount2++ + ": " + s2);
+45:         }
+46: 
+47:         long duration2 = System.nanoTime() - start2;
+48:         out2.close();
+49:         System.out.println("Unbuffered write: " + duration2 + " nanoseconds");
+50:     }
+51: }
