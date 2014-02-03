@@ -14,6 +14,7 @@ public class Individual implements Comparable<Individual> {
     // 'name' is optional:
     public Individual() {}
 
+    @Override
     public String toString() {
         return getClass().getSimpleName() + (name == null ? "" : " " + name);
     }
@@ -22,10 +23,12 @@ public class Individual implements Comparable<Individual> {
         return id;
     }
 
+    @Override
     public boolean equals(Object o) {
         return o instanceof Individual && id == ((Individual)o).id;
     }
 
+    @Override
     public int hashCode() {
         int result = 17;
         if(name != null)
@@ -34,6 +37,7 @@ public class Individual implements Comparable<Individual> {
         return result;
     }
 
+    @Override
     public int compareTo(Individual arg) {
         // Compare by class name first:
         String first = getClass().getSimpleName();

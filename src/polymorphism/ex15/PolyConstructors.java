@@ -25,6 +25,7 @@ class RoundGlyph extends Glyph {
         System.out.println("RoundGlyph.RoundGlyph(), radius = " + radius);
     }
 
+    @Override
     void draw() {
         System.out.println("RoundGlyph.draw(), radius = " + radius);
     }
@@ -42,6 +43,7 @@ class RectangularGlyph extends Glyph {
                 + length + ", width = " + width);
     }
 
+    @Override
     void draw() {
         System.out.println("RectangularGlyph.draw(), length = " + length
                 + ", width = " + width);

@@ -11,7 +11,6 @@ import java.util.Map;
 import net.mindview.util.TextFile;
 
 
-@SuppressWarnings("")
 public class Ex25 {
     public static void main(String[] args) {
         Map<String, ArrayList<Integer>> map =

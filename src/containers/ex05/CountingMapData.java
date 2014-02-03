@@ -95,6 +95,7 @@ public class CountingMapData extends AbstractMap<Integer, String> {
 
     static Map<Integer, String> select(final int size) {
         return new CountingMapData() {
+            @Override
             public Set<Map.Entry<Integer, String>> entrySet() {
                 return new EntrySet(size);
             }

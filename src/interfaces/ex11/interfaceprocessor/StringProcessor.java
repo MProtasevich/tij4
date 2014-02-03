@@ -6,10 +6,12 @@ import java.util.*;
 
 
 public abstract class StringProcessor implements Processor {
+    @Override
     public String name() {
         return getClass().getSimpleName();
     }
 
+    @Override
     public abstract String process(Object input);
 
     public static String s = "If she weighs the same as a duck, she's made of wood";
@@ -23,6 +25,7 @@ public abstract class StringProcessor implements Processor {
 
 
 class Upcase extends StringProcessor {
+    @Override
     public String process(Object input) { // Covariant return
         return ((String)input).toUpperCase();
     }
@@ -30,6 +33,7 @@ class Upcase extends StringProcessor {
 
 
 class Downcase extends StringProcessor {
+    @Override
     public String process(Object input) {
         return ((String)input).toLowerCase();
     }
@@ -37,6 +41,7 @@ class Downcase extends StringProcessor {
 
 
 class Splitter extends StringProcessor {
+    @Override
     public String process(Object input) {
         return Arrays.toString(((String)input).split(" "));
     }

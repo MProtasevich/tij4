@@ -69,6 +69,7 @@ class Stream extends RootDispose {
         System.out.println("Stream");
     }
 
+    @Override
     void dispose() {
         componentStream1.dispose();
         componentStream2.dispose();

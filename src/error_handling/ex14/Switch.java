@@ -18,6 +18,7 @@ public class Switch {
         System.out.println(this);
     }
 
+    @Override
     public String toString() {
         return state ? "on" : "off";
     }

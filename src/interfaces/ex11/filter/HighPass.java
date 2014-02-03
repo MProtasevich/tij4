@@ -9,6 +9,7 @@ public class HighPass extends Filter {
         this.cutoff = cutoff;
     }
 
+    @Override
     public Waveform process(Waveform input) {
         return input;
     }

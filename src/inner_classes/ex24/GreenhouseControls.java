@@ -186,6 +186,7 @@ public class GreenhouseControls extends Controller {
             super(delayTime);
         }
 
+        @Override
         public void action() {
             activated = !activated;
         }

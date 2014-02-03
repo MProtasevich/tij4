@@ -4,7 +4,6 @@ package inner_classes.ex17;
 import java.util.Random;
 
 
-@SuppressWarnings("")
 interface Games {
     void play();
 }
@@ -19,6 +18,7 @@ class CoinToss implements Games {
     public static final int HEADS = 0, TAILS = 1;
 
     public static GamesFactory gamesFactory = new GamesFactory() {
+        @Override
         public Games getGames() {
             return new CoinToss();
         }
@@ -26,6 +26,7 @@ class CoinToss implements Games {
 
     Random rand = new Random();
 
+    @Override
     public void play() {
         System.out.println("Toss Coin: ");
         switch(rand.nextInt(2)) {
@@ -50,6 +51,7 @@ class DiceThrow implements Games {
 
     Random rand = new Random();
 
+    @Override
     public void play() {
         System.out.println("Throw Dice: " + (rand.nextInt(6) + 1));
     }

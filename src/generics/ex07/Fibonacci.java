@@ -10,6 +10,7 @@ public class Fibonacci implements Generator<Integer> {
     private int count = 0;
     private int last, prelast;
 
+    @Override
     public Integer next() {
         return fib(count++);
     }

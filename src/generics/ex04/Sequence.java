@@ -28,15 +28,18 @@ public class Sequence<T> {
     private class SequenceSelector implements Selector<T> {
         private int i = 0;
 
+        @Override
         public boolean end() {
             return i == items.length;
         }
 
+        @Override
         @SuppressWarnings("unchecked")
         public T current() {
             return (T)items[i];
         }
 
+        @Override
         public void next() {
             if(i < items.length)
                 i++;

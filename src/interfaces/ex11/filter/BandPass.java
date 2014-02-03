@@ -10,6 +10,7 @@ public class BandPass extends Filter {
         highCutoff = highCut;
     }
 
+    @Override
     public Waveform process(Waveform input) {
         return input;
     }

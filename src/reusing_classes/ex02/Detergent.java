@@ -20,6 +20,7 @@ class Cleanser {
         append(" scrub()");
     }
 
+    @Override
     public String toString() {
         return s;
     }

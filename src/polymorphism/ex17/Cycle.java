@@ -25,6 +25,7 @@ public class Cycle {
 
 
 class Unicycle extends Cycle {
+    @Override
     void ride() {
         System.out.println("Unicycle.ride()");
     }
@@ -36,6 +37,7 @@ class Unicycle extends Cycle {
 
 
 class Bicycle extends Cycle {
+    @Override
     void ride() {
         System.out.println("Bicycle.ride()");
     }
@@ -47,6 +49,7 @@ class Bicycle extends Cycle {
 
 
 class Tricycle extends Cycle {
+    @Override
     void ride() {
         System.out.println("Tricycle.ride()");
     }

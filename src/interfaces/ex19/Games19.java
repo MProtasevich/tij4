@@ -4,7 +4,6 @@ package interfaces.ex19;
 import java.util.Random;
 
 
-@SuppressWarnings("")
 interface Games {
     void play();
 }
@@ -20,6 +19,7 @@ class CoinToss implements Games {
 
     Random rand = new Random();
 
+    @Override
     public void play() {
         System.out.println("Toss Coin: ");
         switch(rand.nextInt(2)) {
@@ -35,6 +35,7 @@ class CoinToss implements Games {
 
 
 class CoinTossFactory implements GamesFactory {
+    @Override
     public Games getGames() {
         return new CoinToss();
     }
@@ -44,6 +45,7 @@ class CoinTossFactory implements GamesFactory {
 class DiceThrow implements Games {
     Random rand = new Random();
 
+    @Override
     public void play() {
         System.out.println("Throw Dice: " + (rand.nextInt(6) + 1));
     }
@@ -51,6 +53,7 @@ class DiceThrow implements Games {
 
 
 class DiceThrowFactory implements GamesFactory {
+    @Override
     public Games getGames() {
         return new DiceThrow();
     }

@@ -15,17 +15,21 @@ public class IterableFibonacci implements Iterable<Integer> {
         n = count;
     }
 
+    @Override
     public Iterator<Integer> iterator() {
         return new Iterator<Integer>() {
+            @Override
             public boolean hasNext() {
                 return n > 0;
             }
 
+            @Override
             public Integer next() {
                 n--;
                 return fibonacci.next();
             }
 
+            @Override
             public void remove() { // Not implemented
                 throw new UnsupportedOperationException();
             }

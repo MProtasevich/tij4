@@ -12,6 +12,7 @@ interface CycleFactory {
 
 
 class Unicycle implements Cycle {
+    @Override
     public void ride() {
         System.out.println("Unicycle.ride()");
     }
@@ -31,6 +32,7 @@ class UnicycleFactory implements CycleFactory {
 
 
 class Bicycle implements Cycle {
+    @Override
     public void ride() {
         System.out.println("Bicycle.ride()");
     }
@@ -50,6 +52,7 @@ class BicycleFactory implements CycleFactory {
 
 
 class Tricycle implements Cycle {
+    @Override
     public void ride() {
         System.out.println("Tricycle.ride()");
     }
@@ -64,7 +67,6 @@ class TricycleFactory implements CycleFactory {
 }
 
 
-@SuppressWarnings("")
 public class Main {
     static void rideCycle(CycleFactory cycleFactory) {
         Cycle cycle = cycleFactory.getCycle();

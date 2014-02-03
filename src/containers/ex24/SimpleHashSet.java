@@ -223,6 +223,7 @@ public class SimpleHashSet<E> implements Set<E> {
         return false;
     }
 
+    @Override
     public boolean retainAll(Collection<?> c) {
         int n = this.size();
         for(LinkedList<E> bucket : buckets) {

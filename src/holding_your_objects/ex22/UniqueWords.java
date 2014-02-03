@@ -16,6 +16,7 @@ class Word {
         totalWords++;
     }
 
+    @Override
     public String toString() {
         return s + ": " + count;
     }

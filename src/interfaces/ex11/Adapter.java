@@ -6,7 +6,6 @@ import interfaces.ex11.interfaceprocessor.Processor;
 import interfaces.ex11.interfaceprocessor.StringMixer;
 
 
-@SuppressWarnings("")
 public class Adapter implements Processor {
     StringMixer stringMixer;
 
@@ -16,7 +15,6 @@ public class Adapter implements Processor {
 
     @Override
     public String name() {
-        // TODO Auto-generated method stub
         return null;
     }
 

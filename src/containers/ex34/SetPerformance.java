@@ -20,6 +20,7 @@ public class SetPerformance {
     static List<Test<Set<String>>> tests = new ArrayList<Test<Set<String>>>();
     static {
         tests.add(new Test<Set<String>>("add") {
+            @Override
             public int test(Set<String> set, TestParam tp) {
                 int loops = tp.loops;
                 int size = tp.size;
@@ -33,6 +34,7 @@ public class SetPerformance {
             }
         });
         tests.add(new Test<Set<String>>("contains") {
+            @Override
             public int test(Set<String> set, TestParam tp) {
                 int loops = tp.loops;
                 int span = tp.size * 2;
@@ -45,6 +47,7 @@ public class SetPerformance {
             }
         });
         tests.add(new Test<Set<String>>("iterate") {
+            @Override
             public int test(Set<String> set, TestParam tp) {
                 int loops = tp.loops * 10;
                 for(int i = 0; i < loops; i++) {

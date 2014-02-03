@@ -28,14 +28,17 @@ public class Sequence {
     private class SequenceSelector implements Selector {
         private int i = 0;
 
+        @Override
         public boolean end() {
             return i == items.size();
         }
 
+        @Override
         public Object current() {
             return items.get(i);
         }
 
+        @Override
         public void next() {
             if(i < items.size()) {
                 i++;

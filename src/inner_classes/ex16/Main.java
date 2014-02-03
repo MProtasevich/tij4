@@ -19,6 +19,7 @@ class Unicycle implements Cycle {
         }
     };
 
+    @Override
     public void ride() {
         System.out.println("Unicycle.ride()");
     }
@@ -37,6 +38,7 @@ class Bicycle implements Cycle {
         }
     };
 
+    @Override
     public void ride() {
         System.out.println("Bicycle.ride()");
     }
@@ -55,13 +57,13 @@ class Tricycle implements Cycle {
         }
     };
 
+    @Override
     public void ride() {
         System.out.println("Tricycle.ride()");
     }
 }
 
 
-@SuppressWarnings("")
 public class Main {
     static void rideCycle(CycleFactory cycleFactory) {
         Cycle cycle = cycleFactory.getCycle();

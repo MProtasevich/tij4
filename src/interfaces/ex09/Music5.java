@@ -20,14 +20,17 @@ abstract class Instrument {
 
 
 class Wind extends Instrument {
+    @Override
     public void play(Note n) {
         System.out.println(this + ".play() " + n);
     }
 
+    @Override
     public String toString() {
         return "Wind";
     }
 
+    @Override
     public void adjust() {
         System.out.println(this + ".adjust()");
     }
@@ -35,14 +38,17 @@ class Wind extends Instrument {
 
 
 class Percussion extends Instrument {
+    @Override
     public void play(Note n) {
         System.out.println(this + ".play() " + n);
     }
 
+    @Override
     public String toString() {
         return "Percussion";
     }
 
+    @Override
     public void adjust() {
         System.out.println(this + ".adjust()");
     }
@@ -50,14 +56,17 @@ class Percussion extends Instrument {
 
 
 class Stringed extends Instrument {
+    @Override
     public void play(Note n) {
         System.out.println(this + ".play() " + n);
     }
 
+    @Override
     public String toString() {
         return "Stringed";
     }
 
+    @Override
     public void adjust() {
         System.out.println(this + ".adjust()");
     }
@@ -65,6 +74,7 @@ class Stringed extends Instrument {
 
 
 class Brass extends Wind {
+    @Override
     public String toString() {
         return "Brass";
     }
@@ -72,6 +82,7 @@ class Brass extends Wind {
 
 
 class Woodwind extends Wind {
+    @Override
     public String toString() {
         return "Woodwind";
     }

@@ -159,6 +159,7 @@ public class SimpleHashMap<K, V> implements Map<K, V> {
         }
     }
 
+    @Override
     public boolean containsKey(Object key) {
         int index = Math.abs(key.hashCode()) % SIZE;
         if(buckets[index] == null) {
@@ -259,6 +260,7 @@ public class SimpleHashMap<K, V> implements Map<K, V> {
                     return null;
                 }
 
+                @Override
                 public void remove() {
                     for(int j = 0; j < SIZE; j++)
                         if(start(j) <= index && index < end(j))

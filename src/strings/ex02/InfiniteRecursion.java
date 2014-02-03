@@ -5,6 +5,7 @@ import java.util.*;
 
 
 public class InfiniteRecursion {
+    @Override
     public String toString() {
         return " InfiniteRecursion address: " + super.toString() + "\n";
     }
