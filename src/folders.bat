@@ -6,4 +6,3 @@ if %2 GTR 9 (
 ) else (
   for /L %%i in (1, 1, %2) do mkdir "%1\ex0%%i"
 )
-pause

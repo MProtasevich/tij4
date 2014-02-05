@@ -1,8 +1,6 @@
 package generics.ex07;
 
 
-//: generics/Fibonacci.java
-// Generate a Fibonacci sequence.
 import net.mindview.util.*;
 
 

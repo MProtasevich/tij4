@@ -1,4 +1,3 @@
-//: annotations/database/SQLInteger.java
 package annotations;
 
 
