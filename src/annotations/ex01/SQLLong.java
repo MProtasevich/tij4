@@ -1,4 +1,4 @@
-package annotaions.ex01;
+package annotations.ex01;
 
 
 import java.lang.annotation.ElementType;
@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import annotaions.Constraints;
+import annotations.Constraints;
 
 
 @Target(ElementType.FIELD)

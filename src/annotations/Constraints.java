@@ -1,5 +1,4 @@
-//: annotations/database/Constraints.java
-package annotaions;
+package annotations;
 
 
 import java.lang.annotation.*;

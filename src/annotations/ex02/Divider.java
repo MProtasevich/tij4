@@ -1,8 +1,8 @@
-package annotaions.ex02;
+package annotations.ex02;
 
 
 import static net.mindview.util.Print.print;
-import annotaions.ExtractInterface;
+import annotations.ExtractInterface;
 
 
 @ExtractInterface("IDivider")

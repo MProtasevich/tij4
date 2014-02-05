@@ -1,5 +1,4 @@
-//: annotations/ExtractInterface.java
-package annotaions;
+package annotations;
 
 
 import java.lang.annotation.*;
