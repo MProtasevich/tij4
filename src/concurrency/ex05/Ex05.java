@@ -12,7 +12,7 @@ public class Ex05 {
         ExecutorService exec = Executors.newFixedThreadPool(3);
         try {
             for(int i = 0; i < 5; ++i) {
-                Future<Integer> future = exec.submit(new FibonacciCallable(i));
+                Future<Long> future = exec.submit(new FibonacciCallableSum(i));
                 System.out.println(future.get());
             }
         } catch(InterruptedException e) {

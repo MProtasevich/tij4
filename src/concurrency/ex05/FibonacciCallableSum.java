@@ -6,17 +6,17 @@ import generics.ex07.Fibonacci;
 import java.util.concurrent.Callable;
 
 
-public class FibonacciCallable implements Callable<Integer> {
+public class FibonacciCallableSum implements Callable<Long> {
     private int num;
 
-    public FibonacciCallable(int num) {
+    public FibonacciCallableSum(int num) {
         this.num = num;
     }
 
     @Override
-    public Integer call() throws Exception {
+    public Long call() throws Exception {
         Fibonacci fibonacci = new Fibonacci();
-        int res = 0;
+        long res = 0;
         while(num-- != 0) {
             res += fibonacci.next();
         }
